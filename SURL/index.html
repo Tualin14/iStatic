@@ -55,7 +55,7 @@
                 .then(function (res) {
                     console.log(res)
                     let copyInput = document.getElementById('copyInput')
-                    copyInput.value = res.data
+                    copyInput.value = window.location.origin + res.data
                     let copyButton = document.getElementById('copyButton')
                     copyButton.className += ' btn-success'
                     copyButton.removeAttribute('disabled')
