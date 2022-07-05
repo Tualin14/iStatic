@@ -35,8 +35,8 @@
                             <span class="label-text">SURL</span>
                         </label>
                         <div class="input-group">
-                            <input type="text" class="input input-bordered w-full" />
-                            <button class="btn w-40" id="copy" disabled="disabled">Copy!</button>
+                            <input type="text" id="copyInput" class="input input-bordered w-full" />
+                            <button class="btn w-40" id="copyButton" disabled="disabled">Copy!</button>
                         </div>
                     </div>
                 </div>
@@ -53,10 +53,11 @@
                 totpToken: totpToken
             })
                 .then(function (res) {
-                    let copy = document.getElementById('copy')
-                    copy.value = res
-                    copy.className += ' btn-success'
-                    copy.removeAttr("disabled")
+                    let copyInput = document.getElementById('copyInput')
+                    copyInput.value = res
+                    let copyButton = document.getElementById('copyInput')
+                    copyButton.className += ' btn-success'
+                    copyButton.removeAttr("disabled")
                 })
                 .catch(function (error) {
                     document.getElementById('copy').value = 'error'
