@@ -57,7 +57,7 @@
                     copyInput.value = res
                     let copyButton = document.getElementById('copyInput')
                     copyButton.className += ' btn-success'
-                    copyButton.removeAttr("disabled")
+                    copyButton.removeAttribute('disabled')
                 })
                 .catch(function (error) {
                     document.getElementById('copy').value = 'error'
