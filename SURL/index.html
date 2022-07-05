@@ -53,9 +53,10 @@
                 totpToken: totpToken
             })
                 .then(function (res) {
+                    console.log(res)
                     let copyInput = document.getElementById('copyInput')
                     copyInput.value = res
-                    let copyButton = document.getElementById('copyInput')
+                    let copyButton = document.getElementById('copyButton')
                     copyButton.className += ' btn-success'
                     copyButton.removeAttribute('disabled')
                 })
